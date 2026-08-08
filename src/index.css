@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Be Vietnam Pro", sans-serif;
+  --color-primary: #5950b6;
+  --color-primary-container: #9d94ff;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #32258d;
+  --color-on-primary-fixed-variant: #41369d;
+  --color-secondary: #496643;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #caecbf;
+  --color-on-secondary-container: #4f6c48;
+  --color-tertiary: #77592d;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #c09b69;
+  --color-on-tertiary-container: #4c3309;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-surface: #f8f9ff;
+  --color-surface-dim: #cbdbf5;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e5eeff;
+  --color-surface-container-high: #dce9ff;
+  --color-surface-container-highest: #d3e4fe;
+  --color-surface-variant: #d3e4fe;
+  --color-on-surface: #0b1c30;
+  --color-on-surface-variant: #474552;
+  --color-outline-variant: #c8c4d4;
+  --color-background: #f8f9ff;
+  --color-on-background: #0b1c30;
+  --color-inverse-surface: #213145;
+  --color-inverse-on-surface: #eaf1ff;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+h1, h2, h3, h4, h5, h6, button, .font-display {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Glassmorphism Cards */
+.glass-card, .glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-card, .dark .glass-panel {
+  background: rgba(33, 49, 69, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glass Inputs */
+.glass-input {
+  background: #ffffff;
+  border: 1px solid #d3e4fe;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 16px;
+  color: #0b1c30;
+  width: 100%;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px 0 rgba(89, 80, 182, 0.05);
+}
+
+.dark .glass-input {
+  background: #192738;
+  border-color: #2e445e;
+  color: #eaf1ff;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #c6c0ff;
+  box-shadow: 0 4px 20px 0 rgba(89, 80, 182, 0.15);
+  background: #ffffff;
+}
+
+.dark .glass-input:focus {
+  background: #213145;
+  border-color: #9d94ff;
+}
+
+.glass-input::placeholder {
+  color: #474552;
+  opacity: 0.6;
+}
+
+.dark .glass-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Chips */
+.chip-active {
+  background-color: #caecbf;
+  color: #4f6c48;
+  border-color: #caecbf;
+  transform: scale(0.98);
+}
+
+.chip-inactive {
+  background-color: transparent;
+  color: #474552;
+  border-color: #c8c4d4;
+}
+
+.dark .chip-inactive {
+  color: #cbd5e1;
+  border-color: #475569;
+}
+
+/* Interactive feedback */
+.squish-btn {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease;
+}
+
+.squish-btn:active {
+  transform: scale(0.96);
+}
+
+/* Range Input styling */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: #5950b6;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(89, 80, 182, 0.3);
+  transition: background 0.3s ease, transform 0.15s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Breathing Box Animation */
+.breathing-box {
+  animation: breathe 16s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(0.65); opacity: 0.5; }
+  25% { transform: scale(1.1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 1; }
+  75% { transform: scale(0.65); opacity: 0.5; }
+}
+
+.dark body {
+  background-color: #0d1622;
+  color: #eaf1ff;
+}
+

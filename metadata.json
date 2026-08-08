@@ -1,0 +1,6 @@
+{
+  "name": "StudentCare",
+  "description": "Student mental wellness journal, mood tracker, trend insights, and nervous system reset toolbox.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
